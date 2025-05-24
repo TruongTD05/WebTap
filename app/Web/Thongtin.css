@@ -1,0 +1,881 @@
+/* --------------------
+   Global Resets & Basic Styles
+   -------------------- */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    /* Default text color */
+    background-color: #fff;
+    /* Default background */
+    scroll-behavior: smooth;
+    /* Smooth scrolling for anchor links */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* --------------------
+   Container
+   -------------------- */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    /* Max width for larger screens */
+    margin: 0 auto;
+    /* Center the container */
+    padding: 0 15px;
+    /* Padding on the sides */
+}
+
+
+/* --------------------
+   Typography
+   -------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #2c3e50;
+    /* Dark blue for headings */
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 0.75em;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+    color: #555;
+}
+
+
+/* Slightly lighter color for paragraphs */
+
+a {
+    color: #3498db;
+    /* Blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* --------------------
+   Header & Navigation
+   -------------------- */
+
+header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    /* Sticky header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Ensure header is above other content */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.logo span {
+    color: #3498db;
+    /* Accent color for "Nets" */
+}
+
+.logo:hover {
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: #555;
+    font-weight: 400;
+    padding: 8px 0;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    /* You might add 'active' class via JS for current page */
+    color: #3498db;
+    text-decoration: none;
+    border-bottom-color: #3498db;
+}
+
+
+/* --------------------
+   Hero Section (applies to .hero-section on all pages)
+   -------------------- */
+
+.hero-section {
+    /* Replace with your desired background image */
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://atscada.com/wp-content/uploads/2024/03/vps-la-gi-1.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 2.8em;
+    /* Adjusted for responsiveness */
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 700px;
+    /* Constrain paragraph width */
+    margin-left: auto;
+    margin-right: auto;
+    color: #f0f0f0;
+    /* Lighter text for better contrast on dark bg */
+}
+
+
+/* --------------------
+   Buttons (CTA - Call To Action)
+   -------------------- */
+
+.cta-button,
+.cta-button-outline {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    cursor: pointer;
+    border: 2px solid transparent;
+    /* Base border for consistent sizing */
+}
+
+.cta-button {
+    background-color: #e67e22;
+    /* Orange accent */
+    color: #ffffff;
+    border-color: #e67e22;
+}
+
+.cta-button:hover {
+    background-color: #d35400;
+    /* Darker orange on hover */
+    border-color: #d35400;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+.cta-button-outline {
+    background-color: transparent;
+    color: #e67e22;
+    border-color: #e67e22;
+}
+
+.cta-button-outline:hover {
+    background-color: #e67e22;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(230, 126, 34, 0.3);
+    text-decoration: none;
+}
+
+
+/* For hero section, if a different color is needed for contrast */
+
+.hero-section .cta-button {
+    background-color: #f39c12;
+    /* Lighter orange */
+    border-color: #f39c12;
+}
+
+.hero-section .cta-button:hover {
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+
+
+/* --------------------
+   General Section Styling
+   -------------------- */
+
+.features-section,
+.pricing-section,
+.testimonials-section,
+.cta-final-section,
+.page-section
+/* A generic class for other full-width sections */
+
+{
+    padding: 70px 0;
+    text-align: center;
+}
+
+
+/* Alternate background for visual separation */
+
+.features-section:nth-of-type(even),
+#solution-benefits,
+
+/* Specific ID from Giaiphap.html */
+
+#map-location
+/* Specific ID from Thongtin.html for the map section background */
+
+{
+    background-color: #f9f9f9;
+}
+
+.section-subtitle {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 50px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* --------------------
+   Features Grid (Used for Features, Solutions List, Solution Benefits, Contact Details)
+   -------------------- */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Responsive grid */
+    gap: 30px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.feature-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.feature-item img {
+    max-width: 70px;
+    /* Adjust icon size */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-bottom: 20px;
+}
+
+.feature-item img.icon-small {
+    /* Utility class for smaller icons like on Thongtin page */
+    max-width: 50px;
+}
+
+.feature-item h3 {
+    font-size: 1.4em;
+    color: #3498db;
+    /* Blue for feature titles */
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 0.95em;
+    line-height: 1.7;
+}
+
+
+/* --------------------
+   Pricing Section
+   -------------------- */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    align-items: stretch;
+    /* Makes cards the same height */
+}
+
+.pricing-plan {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    /* For badge positioning */
+}
+
+.pricing-plan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-plan.popular {
+    border: 2px solid #3498db;
+    /* Highlight popular plan */
+    transform: scale(1.03);
+    /* Slightly larger */
+}
+
+.pricing-plan.popular:hover {
+    transform: scale(1.05) translateY(-5px);
+    /* Enhanced hover for popular */
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    /* Position above the card */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3498db;
+    color: white;
+    padding: 6px 18px;
+    font-size: 0.9em;
+    border-radius: 20px;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(52, 152, 219, 0.4);
+}
+
+.pricing-plan h3 {
+    font-size: 1.7em;
+    margin-bottom: 15px;
+}
+
+.pricing-plan .price {
+    font-size: 1.2em;
+    /* For "VNĐ/tháng" */
+    color: #e67e22;
+    /* Orange for price */
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.pricing-plan .price span {
+    font-size: 2.2em;
+    /* Larger for the number */
+    font-weight: 700;
+    display: block;
+    /* Number on its own line */
+    line-height: 1.2;
+}
+
+.pricing-plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    flex-grow: 1;
+    /* Pushes button to bottom */
+    text-align: left;
+    /* Align list items to the left */
+}
+
+.pricing-plan ul li {
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 0.95em;
+    padding-left: 25px;
+    /* Space for custom bullet */
+    position: relative;
+}
+
+.pricing-plan ul li::before {
+    /* Custom bullet point */
+    content: '✓';
+    /* Checkmark */
+    color: #27ae60;
+    /* Green */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+
+.pricing-plan .cta-button,
+.pricing-plan .cta-button-outline {
+    margin-top: auto;
+    /* Sticks button to the bottom */
+    width: 100%;
+    /* Full width button in plan */
+}
+
+
+/* --------------------
+   Testimonials Section
+   -------------------- */
+
+.testimonials-section {
+    background-color: #f9f9f9;
+    /* Light gray background */
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonial-item {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #3498db;
+    /* Accent border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    text-align: left;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1em;
+    line-height: 1.7;
+}
+
+.testimonial-item p::before {
+    content: '"';
+    /* Opening quote */
+    font-size: 1.5em;
+    color: #bdc3c7;
+    margin-right: 5px;
+}
+
+.testimonial-item p::after {
+    content: '"';
+    /* Closing quote */
+    font-size: 1.5em;
+    color: #bdc3c7;
+    margin-left: 5px;
+}
+
+.testimonial-item h4 {
+    font-size: 1em;
+    color: #2c3e50;
+    font-weight: 700;
+    text-align: right;
+    margin-top: 10px;
+}
+
+
+/* --------------------
+   CTA Final Section
+   -------------------- */
+
+.cta-final-section {
+    background-color: #2c3e50;
+    /* Dark blue background */
+    color: #ffffff;
+}
+
+.cta-final-section h2 {
+    color: #ffffff;
+}
+
+.cta-final-section p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ecf0f1;
+    /* Lighter text on dark background */
+}
+
+
+/* Use orange CTA button for contrast */
+
+.cta-final-section .cta-button {
+    background-color: #e67e22;
+    border-color: #e67e22;
+    color: #fff;
+}
+
+.cta-final-section .cta-button:hover {
+    background-color: #d35400;
+    border-color: #d35400;
+}
+
+
+/* --------------------
+   Contact Form & Content Blocks
+   -------------------- */
+
+.contact-form-section {
+    /* Can be used on a <section> for the contact form area */
+    padding: 70px 0;
+    /* Consistent with other sections */
+    /* Or, if it's not a full-width background section, specific styling might be needed */
+}
+
+.contact-content-block {
+    /* Use this for centered content blocks like the form container */
+    max-width: 700px;
+    margin: 40px auto;
+    /* Centered block with top/bottom margin */
+    padding: 30px;
+    background-color: #f9f9f9;
+    /* Light background for the block */
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-content-block h2 {
+    /* Heading within this block */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    /* Slightly darker border for better visibility */
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="password"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    /* Blue border on focus */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    /* Subtle glow on focus */
+    outline: none;
+    /* Remove default browser outline */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* Ensure .cta-button used in forms (like submit) can be full width */
+
+.form-group .cta-button {
+    width: 100%;
+    padding-top: 12px;
+    /* Ensure consistent padding if overridden */
+    padding-bottom: 12px;
+}
+
+
+/* --------------------
+   Map Element Styling
+   -------------------- */
+
+.map-container {
+    /* Wrapper for the map iframe, typically inside a .container of a section */
+    margin-top: 30px;
+    /* Space above the map within its section */
+    text-align: center;
+    /* Centers the iframe if its display is inline-block */
+    overflow: hidden;
+    /* Helps contain the iframe and its shadow/border-radius */
+    border-radius: 8px;
+    /* Apply border-radius to the container */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    /* Shadow on the container */
+}
+
+.map-container iframe {
+    display: block;
+    /* Ensures it takes up width and allows margin auto if needed */
+    width: 100%;
+    /* Make iframe responsive within its container */
+    max-width: 100%;
+    /* Redundant if width:100%, but safe */
+    height: 450px;
+    /* Default height, adjust as needed */
+    border: 0;
+    /* Remove default iframe border */
+    /* border-radius applied to parent .map-container for better clipping of shadow */
+}
+
+
+/* --------------------
+   Footer
+   -------------------- */
+
+footer {
+    background-color: #34495e;
+    /* Darker blue-gray for footer */
+    color: #bdc3c7;
+    /* Light gray text */
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-bottom: 8px;
+    color: #bdc3c7;
+}
+
+footer a {
+    color: #ecf0f1;
+    /* Lighter link color for footer */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+/* --------------------
+   Responsive Design
+   -------------------- */
+
+
+/* Tablets and larger phones */
+
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 2.4em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .pricing-plan.popular {
+        transform: scale(1);
+    }
+    /* Reset popular plan scaling */
+}
+
+
+/* Smaller tablets and mobile phones (landscape) */
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        margin-bottom: 15px;
+    }
+    header ul {
+        flex-direction: column;
+        /* Stack nav links */
+        align-items: center;
+        width: 100%;
+    }
+    header ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    header ul li a {
+        display: block;
+        /* Make links full width for easier tapping */
+        padding: 10px;
+        border-bottom: none;
+        /* Remove bottom border for stacked items */
+    }
+    header ul li a:hover,
+    header ul li a.active {
+        background-color: #f0f0f0;
+        /* Add background on hover/active for stacked items */
+        border-bottom: none;
+        color: #3498db;
+    }
+    .hero-section {
+        padding: 60px 0;
+    }
+    .hero-section h1 {
+        font-size: 2em;
+    }
+    .hero-section p {
+        font-size: 1em;
+    }
+    .features-grid,
+    .pricing-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        /* Stack items */
+    }
+    .feature-item,
+    .pricing-plan,
+    .testimonial-item,
+    .contact-content-block {
+        text-align: center;
+        /* Center content when stacked */
+    }
+    .feature-item img,
+    .contact-content-block img.icon-small {
+        /* Also center icons in contact blocks */
+        margin-left: auto;
+        margin-right: auto;
+        /* Center images */
+    }
+    .pricing-plan ul {
+        text-align: center;
+        /* Center list items in pricing plan */
+    }
+    .pricing-plan ul li {
+        padding-left: 0;
+        position: relative;
+        /* Ensure ::before is positioned relative to li */
+    }
+    .pricing-plan ul li::before {
+        /* Adjust for centered text: position it to the left of the text */
+        display: inline-block;
+        /* Allow it to sit with text */
+        position: static;
+        /* Simpler layout for centered items */
+        margin-right: 8px;
+    }
+    .features-section,
+    .pricing-section,
+    .testimonials-section,
+    .cta-final-section,
+    .page-section,
+    .contact-form-section {
+        padding: 50px 0;
+    }
+    .contact-content-block {
+        margin: 20px auto;
+        /* Reduce margin for smaller screens */
+        padding: 20px;
+    }
+}
+
+
+/* Small mobile phones (portrait) */
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+    .hero-section p {
+        font-size: 0.9em;
+    }
+    h2 {
+        font-size: 1.7em;
+    }
+    h3 {
+        font-size: 1.3em;
+    }
+    .cta-button,
+    .cta-button-outline {
+        padding: 10px 20px;
+        font-size: 0.95em;
+        width: 100%;
+        /* Full width buttons on small screens */
+        margin-bottom: 10px;
+    }
+    .cta-button:last-child,
+    .cta-button-outline:last-child {
+        /* Remove margin from last button if stacked */
+        margin-bottom: 0;
+    }
+    .form-group .cta-button {
+        /* Ensure form buttons are also full width */
+        width: 100%;
+    }
+    .logo {
+        font-size: 1.6em;
+    }
+    .pricing-plan .price span {
+        font-size: 1.8em;
+    }
+    .map-container iframe {
+        height: 300px;
+    }
+    /* Reduce map height on small screens */
+}

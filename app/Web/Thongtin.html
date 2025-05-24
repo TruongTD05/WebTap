@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Liên Hệ - VPSNets</title>
+    <link rel="stylesheet" href="Thongtin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .contact-form-container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-form-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 400;
+            color: #333;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1em;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-group input[type="submit"],
+        .contact-form-container .cta-button {
+            /* Ensure cta-button styles apply */
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1em;
+        }
+        
+        .map-container {
+            margin-top: 40px;
+            text-align: center;
+            /* Center the iframe if it's inline-block */
+        }
+        
+        .map-container iframe {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">🌐 VPS<span>Nets</span>
+            </a>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="Dichvu.html">Dịch vụ</a></li>
+                <li><a href="Hosting.html">Hosting</a></li>
+                <li><a href="Mcvl.html">Máy chủ vật lý</a></li>
+                <li><a href="Giaiphap.html">Giải pháp</a></li>
+                <li><a href="Thongtin.html">Thông tin</a></li>
+                <li><a href="Dieukhoan.html">Điều khoản</a></li>
+                <li><a href="Tql.html">Trang quản lý</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero-contact" class="hero-section">
+        <div class="container">
+            <h1>Thông Tin Liên Hệ</h1>
+            <p>Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn. Đừng ngần ngại kết nối với VPSNets!</p>
+            <a href="#contact-details-section" class="cta-button">Xem Chi Tiết Liên Hệ</a>
+        </div>
+    </section>
+
+    <section id="contact-details-section" class="features-section">
+        <div class="container">
+            <h2>Kết Nối Với Chúng Tôi</h2>
+            <p class="section-subtitle">Dưới đây là các thông tin để bạn có thể dễ dàng liên hệ hoặc tìm đến văn phòng của VPSNets.</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <img src="https://img.icons8.com/material-outlined/96/2c3e50/marker.png" alt="Địa chỉ Icon" style="max-width: 50px;">
+                    <h3>Địa Chỉ Văn Phòng</h3>
+                    <p>Số 123, Đường ABC, Phường XYZ, Quận Hoàn Kiếm, Hà Nội, Việt Nam (Ví dụ)</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://img.icons8.com/material-outlined/96/2c3e50/phone.png" alt="Điện thoại Icon" style="max-width: 50px;">
+                    <h3>Điện Thoại Hỗ Trợ</h3>
+                    <p>Hotline: (024) 1234 5678<br>Kỹ thuật: (024) 8765 4321 (Ví dụ)</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://img.icons8.com/material-outlined/96/2c3e50/mail.png" alt="Email Icon" style="max-width: 50px;">
+                    <h3>Địa Chỉ Email</h3>
+                    <p>Hỗ trợ: hotro@vpsnets.vn<br>Kinh doanh: kinhdoanh@vpsnets.vn (Ví dụ)</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://img.icons8.com/material-outlined/96/2c3e50/clock.png" alt="Giờ làm việc Icon" style="max-width: 50px;">
+                    <h3>Giờ Làm Việc</h3>
+                    <p>Thứ 2 - Thứ 6: 08:00 - 17:30<br>Thứ 7: 08:00 - 12:00 (Chủ Nhật nghỉ)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-form-main" class="contact-form-container">
+        <div class="container">
+            <h2>Gửi Tin Nhắn Cho Chúng Tôi</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="fullName">Họ và Tên:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Địa chỉ Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Chủ đề:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Nội dung tin nhắn:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Gửi Tin Nhắn" class="cta-button">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="map-location" class="features-section" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2>Vị Trí Của Chúng Tôi Trên Bản Đồ</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.636680496779!2d105.84093207500096!3d21.00721128063571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac7096371369%3A0x391726e50959ef30!2zSG8gVHJp4buBdSBWxak!5e0!3m2!1svi!2s!4v1688888888888!5m2!1svi!2s"
+                    width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bản đồ vị trí VPSNets"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 VPSNets. Đã đăng ký Bản quyền.</p>
+            <p>
+                <a href="Dieukhoan.html">Điều khoản Dịch vụ</a> |
+                <a href="#">Chính sách Bảo mật</a> </p>
+        </div>
+    </footer>
+</body>
+
+</html>
